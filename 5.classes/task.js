@@ -126,6 +126,6 @@ class Student {
     const choosesTheme = Object.keys(this.marks);
     const averageValue = choosesTheme.reduce((acc, theme) => acc + this.getAverageBySubject(theme), 0);
 
-    return averageValue / choosesTheme.length;
+    return averageValue / choosesTheme.length || 0;
   }
 }
