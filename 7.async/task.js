@@ -34,7 +34,6 @@ class AlarmClock {
     this.intervalId = setInterval(() => {
       this.alarmCollection.forEach(alarm => {
         if (alarm.time === currentTime && alarm.canCall === true) {
-          console.log(alarm.time);
           alarm.canCall = false;
           alarm.callback();
         }
